@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - NexusShop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Page Header -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+                        </ol>
+                    </nav>
+                    <h1 class="mb-3">Your Shopping Cart</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-white">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <h5 class="mb-0">Cart Items</h5>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <span id="item-count">3 items</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th width="50%">Product</th>
+                                            <th width="15%">Price</th>
+                                            <th width="20%">Quantity</th>
+                                            <th width="15%">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cart-items">
+                                        <!-- Cart items will be loaded here -->
+                                        <tr>
+                                            <td colspan="4" class="text-center py-5">
+                                                <div class="py-4">
+                                                    <i class="fas fa-shopping-cart fa-3x text-muted mb-3"></i>
+                                                    <h5>Your cart is empty</h5>
+                                                    <p class="text-muted">Browse our products and add items to your cart</p>
+                                                    <a href="products.html" class="btn btn-primary">Continue Shopping</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Coupon code">
+                            <button class="btn btn-primary" type="button">Apply Coupon</button>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="products.html" class="btn btn-outline-primary">
+                            <i class="fas fa-arrow-left me-2"></i>Continue Shopping
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0">Order Summary</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Subtotal</span>
+                                <span id="subtotal">$0.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Shipping</span>
+                                <span id="shipping">$0.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Tax</span>
+                                <span id="tax">$0.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Discount</span>
+                                <span id="discount">-$0.00</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between fw-bold fs-5">
+                                <span>Total</span>
+                                <span id="total">$0.00</span>
+                            </div>
+                            <div class="d-grid mt-4">
+                                <a href="checkout.html" class="btn btn-primary">Proceed to Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card border-0 shadow-sm mt-4">
+                        <div class="card-body">
+                            <h6 class="mb-3">We Accept</h6>
+                            <img src="https://media.istockphoto.com/id/2078490118/photo/businessman-using-laptop-to-online-payment-banking-and-online-shopping-financial-transaction.jpg?s=1024x1024&w=is&k=20&c=SDepWtu5jUrc1Jk_GlQSqlD1mwUgfZXYjOJaoeadIQU=" class="img-fluid" alt="Payment Methods">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
